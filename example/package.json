@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "listObjects": "ts-node-dev src/listObjects.ts",
-    "dev": "yarn ts-node-dev --respawn --rs src/listObjects.ts"
+    "putObject": "ts-node-dev src/putObject.ts",
+    "dev": "yarn ts-node-dev --respawn --rs src/putObject.ts"
   },
   "dependencies": {
     "cross-env": "^7.0.3",
