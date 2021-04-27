@@ -33,3 +33,4 @@ build/
 
 *.csv
 *.cache.json
+.env

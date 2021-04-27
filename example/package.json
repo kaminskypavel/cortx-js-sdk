@@ -1,0 +1,14 @@
+{
+  "name": "cortx-js-sdk-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "listObjects": "ts-node-dev src/listObjects.ts",
+    "dev": "ts-node-dev --respawn --rs src/listObjects.ts"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0"
+  }
+}
