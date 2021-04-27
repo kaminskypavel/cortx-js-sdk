@@ -4,7 +4,7 @@
   "description": "a typescript api for CORTX",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "author": "Pavel 'PK' Kaminsky <kaminsky.pavel@gmail.com> (http://www.pavel-kaminsky.com)",
+  "author": "Pavel 'PK' Kaminsky <kaminsky.pavel@gmail.com> (https://www.pavel-kaminsky.com)",
   "license": "ISC",
   "scripts": {
     "build": "tsc",
