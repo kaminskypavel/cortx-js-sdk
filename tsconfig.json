@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": [
+      "es2018"
+    ],
+    "skipLibCheck": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true
+  },
+  "exclude": [
+    "**/*.spec.*",
+    "node_modules",
+    "dist"
+  ]
+}

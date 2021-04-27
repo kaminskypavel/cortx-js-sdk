@@ -1,0 +1,62 @@
+{
+  "name": "cortx-js-sdk",
+  "version": "0.0.0-development",
+  "description": "a typescript api for CORTX",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Pavel 'PK' Kaminsky <kaminsky.pavel@gmail.com> (http://www.pavel-kaminsky.com)",
+  "license": "ISC",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn --rs src/index.ts",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lint:eslint": "eslint src/**/*.ts --fix",
+    "lint:prettier": "prettier --config .prettierrc --write src/**/*.{ts,js,json}",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "prepush": "npm run build",
+    "prepublish": "tsc",
+    "semantic-release": "semantic-release"
+  },
+  "homepage": "www.pavel-kaminsky.com",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "@types/node": "14.14.31",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
+    "commitizen": "^4.2.3",
+    "cross-env": "7.0.3",
+    "eslint": "7.20.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "=4",
+    "jest": "26.6.3",
+    "lint-staged": "^10.5.4",
+    "prettier": "2.2.1",
+    "semantic-release": "^17.3.9",
+    "semantic-release-cli": "^5.4.3",
+    "ts-jest": "^26.5.2",
+    "ts-node-dev": "1.1.1",
+    "typescript": "4.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaminskypavel/cortx-js-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kaminskypavel/cortx-js-sdk/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  }
+}
