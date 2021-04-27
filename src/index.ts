@@ -3,15 +3,20 @@ import AWS from 'aws-sdk';
 import https from 'https';
 
 
-class CORTX_S3 extends AWS.S3 {
-  // @ts-ignore
-  private endpoint: string;
-  private accessKeyId: string;
-  private secretAccessKey: string;
-
+export default class CORTX {
+  private endpoint;
+  private accessKeyId;
+  private secretAccessKey;
 
   constructor(endpoint: string, accessKeyId: string, secretAccessKey: string) {
-    super({
+    this.endpoint = endpoint;
+    this.accessKeyId = accessKeyId;
+    this.secretAccessKey = secretAccessKey;
+  }
+
+  createS3Connector = () => {
+    const {secretAccessKey, accessKeyId, endpoint} = this;
+    return new AWS.S3({
       accessKeyId,
       secretAccessKey,
       endpoint,
@@ -20,14 +25,14 @@ class CORTX_S3 extends AWS.S3 {
         agent: new https.Agent({rejectUnauthorized: false})
       }
     });
+  };
 
-    this.endpoint = endpoint;
-    this.accessKeyId = accessKeyId;
-    this.secretAccessKey = secretAccessKey;
-  }
+  createGoogleStorageConnector = () => {
+    return null;
+  };
+
+  createMOTRConnector = () => {
+    return null;
+  };
 }
 
-
-export default {
-  CORTX_S3
-};
