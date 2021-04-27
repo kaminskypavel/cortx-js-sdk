@@ -20,7 +20,8 @@
     "semantic-release": "semantic-release"
   },
   "homepage": "www.pavel-kaminsky.com",
-  "dependencies": {
+  "peerDependencies": {
+    "aws-sdk": ">=^2.892.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.20",
