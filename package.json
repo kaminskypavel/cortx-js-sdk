@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Pavel 'PK' Kaminsky <kaminsky.pavel@gmail.com> (https://www.pavel-kaminsky.com)",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "build": "tsc",
     "dev": "ts-node-dev --respawn --rs src/index.ts",
